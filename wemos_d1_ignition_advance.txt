@@ -1,0 +1,13 @@
+In this updated code, the rpmThresholds array now contains 13 RPM thresholds at 500 RPM increments. 
+The rest of the code remains the same as before.
+
+In this updated code, the revLimitRPM variable is introduced to specify the maximum RPM limit 
+(in this case, set to 6000 RPM). Inside the loop() function, an additional check is performed 
+before applying the timing advance. If the RPM exceeds the maximum limit, the rev limiter action is triggered, 
+and the MOSFET is turned off to limit the RPM.
+
+Please note that you can adjust the values of timingAdvanceMin, timingAdvanceMax, 
+and revLimitRPM to suit your requirements.
+
+On the hardware side this project uses a wemos d1 mini clone, I selected this processor becuase they are 
+inexpensive and readily available.
